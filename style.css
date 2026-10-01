@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Special+Elite&display=swap');
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: url("images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #4a3030;
+    font-family: "Special Elite", monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer {
+  position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: min(900px, 90vw);
+    border: 2px solid darkpink;
+    background-color: rgba(219, 165, 227, 0.8);
+}
+footer > div {
+  min-width: 0;
+  padding: 8px;
+  border: 2px solid darkpink;
+}
+footer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+footer > .stressed-wiz {
+  position: absolute;
+  top: calc(100% - 30px);
+  left: calc(50% + 25vw);
+  z-index: 1;
+  width: auto;
+  height: 280px;
+  margin: 0;
+  object-fit: contain;
+  transform: translateX(-50%);
+}
+a {
+    color: inherit;
+}
+.runaway-penguin {
+  position: fixed;
+  z-index: 2;
+  top: 24px;
+  left: 24px;
+  width: min(150px, 24vw);
+  height: auto;
+  pointer-events: none;
+  transition: left 140ms ease-out, top 140ms ease-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .runaway-penguin {
+    transition: none;
+  }
+}
+/* Home Page */
+
+.home::-webkit-scrollbar {
+    display: none;
+}
+.home h1 {
+    margin: 0 0 10px;
+    font-family: "Monsieur La Doulaise", cursive;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+.title-happy {
+  position: relative;
+  display: inline-block;
+}
+.title-happy img {
+  position: absolute;
+  top: calc(100% + 28px);
+  left: calc(50% - 60px);
+  width: 280px;
+  height: auto;
+  transform: translateX(-50%);
+}
+.title-name {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-name img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: block;
+  width: 140px;
+  height: auto;
+  transform: translateX(-50%);
+}
+.home > p {
+    margin: 0 0 45px;
+    text-align: center;
+}
+/* Envelope Grid */
+.envelope-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.new-letters {
+  position: relative;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: min(600px, 90vw);
+  margin: 20px auto;
+  padding-bottom: 180px;
+}
+.new-letters .envelope {
+  width: 100%;
+}
+.new-letters .envelope:first-child {
+  position: relative;
+  left: -55px;
+}
+.new-letters .stressed-envelope {
+  position: relative;
+  top: 180px;
+  left: 45px;
+}
+.new-letters .envelope .sad-open {
+  position: relative;
+  display: inline-block;
+}
+.new-letters .envelope .sad-open img {
+  position: absolute;
+  top: calc(100% + 40px);
+  left: 50%;
+  display: block;
+  width: 180px;
+  height: auto;
+  margin: 0;
+  object-fit: contain;
+  transform: translateX(-50%);
+}
+.new-letters .between-labels {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 130px;
+  height: auto;
+  transform: translateX(-50%);
+}
+.new-letters .envelope img {
+  transform: scale(0.92);
+}
+.envelope {
+    width: 260px;
+    justify-self: center;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+.envelope img {
+    display: block;
+    width: 250px;
+    height: 185px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+.envelope p {
+    margin: 12px 0 0;
+    font-size: 17px;
+    line-height: 1.4;
+}
+.envelope:hover {
+    transform: translateY(-6px);
+}
+/* Letter Page */
+.letter-container {
+    position: relative;
+    width: 700px;
+    max-width: 90vw;
+    margin-top: 30px;
+}
+.opening-gif {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.letter-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55%;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+.letter-text.hidden {
+    opacity: 0;
+}
+.letter-text h1 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: normal;
+}
+.letter-text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.back-link {
+    margin-top: 30px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.back-link:hover{
+    text-decoration: underline;
+}
+/* mobile version */
+@media (max-width: 600px) {
+  body {
+    padding: 20px 0;
+  }
+  /* HOME */
+  .home {
+    width: 90vw;
+    height: 80vh;
+    padding: 40px 15px;
+    border-radius: 25px;
+    overflow-y: auto;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .home::-webkit-scrollbar {
+    display: none;
+  }
+  .home h1 {
+    font-size: 42px;
+  }
+  .home > p {
+    margin-bottom: 30px;
+  }
+  /* ENVELOPES */
+  .envelope-grid {
+    width: 100%;
+    grid-template-columns:1fr;
+    gap: 30px 0;
+    justify-items: center;
+  }
+  .new-letters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    width: 90vw;
+    margin: 15px auto;
+    padding-bottom: 140px;
+  }
+  .new-letters .envelope:first-child {
+    left: -24px;
+  }
+  .new-letters .stressed-envelope {
+    top: 140px;
+    left: 20px;
+  }
+  .new-letters .between-labels {
+    top: 17px;
+    width: 96px;
+  }
+  footer > .stressed-wiz {
+    height: 220px;
+  }
+  .envelope {
+    width: 150px;
+    justify-self: center;
+  }
+  .envelope img {
+    width: 150px;
+    height: 115px;
+  }
+  .new-letters .envelope img {
+    width: 100%;
+  }
+  .envelope p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  /* LETTER */
+  .letter-page {
+    padding: 30px 15px;
+  }
+  .letter-container {
+    width: 95vw;
+    margin-top: 20px;
+  }
+  .letter-text {
+    width: 55%;
+  }
+  .letter-text h1 {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+  .letter-text p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+  /* BACK LINK */
+  .back-link {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+}
