@@ -59,6 +59,14 @@ a {
   pointer-events: none;
   transition: left 140ms ease-out, top 140ms ease-out;
 }
+.site-qr {
+  display: block;
+  width: min(180px, 40vw);
+  height: auto;
+  margin: 24px auto;
+  padding: 8px;
+  background: #fff;
+}
 @media (prefers-reduced-motion: reduce) {
   .runaway-penguin {
     transition: none;
