@@ -2,7 +2,7 @@ const letters = {
     "miss-you": {
         title: "happy 2 year anniversary! ",
         message:
-            "Hi, luke! I love you so much that i tried my best to learn how to code like you. I love spending time with you so much you are my best friend, and I feel like I can be any version of myself around you. You make me so happy and I think you are incredible. Love from Harriet <3"
+            "Hi, luke, happy 2 year anniversary. You are my favourite person in the world and my best friend. I cant imagine my life without you now, I want to share everythig with you and I cant wait to see us in the future. I think you're my person and I want to be yours. I love you so much, Robot Harriet <3"
     },
     sad: {
         finalImage: "images/sad.jfif"
