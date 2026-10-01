@@ -144,6 +144,16 @@ a {
   position: relative;
   display: inline-block;
 }
+.new-letters .sad-label-text {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.new-letters .envelope:first-child:hover {
+  transform: none;
+}
+.new-letters .envelope:first-child:hover .sad-label-text {
+  transform: translateY(-6px);
+}
 .new-letters .envelope .sad-open img {
   position: absolute;
   top: calc(100% + 40px);
