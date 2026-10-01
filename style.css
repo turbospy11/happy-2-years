@@ -144,15 +144,8 @@ a {
   position: relative;
   display: inline-block;
 }
-.new-letters .sad-label-text {
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-.new-letters .envelope:first-child:hover {
-  transform: none;
-}
-.new-letters .envelope:first-child:hover .sad-label-text {
-  transform: translateY(-6px);
+.new-letters .envelope:first-child:hover .sad-open img {
+  transform: translate(-50%, 6px);
 }
 .new-letters .envelope .sad-open img {
   position: absolute;
@@ -164,6 +157,7 @@ a {
   margin: 0;
   object-fit: contain;
   transform: translateX(-50%);
+  transition: transform 0.2s ease;
 }
 .new-letters .between-labels {
   position: absolute;
